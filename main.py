@@ -13,7 +13,7 @@ for line in lines:
     line=line.strip()
     line=line.replace("</string>","")
     line= line.split(">")
-    print(line[0],line[1])
+    # print(line[0],line[1])
 
     driver.get(search_url.format(q=line[1]))
     time.sleep(2)
@@ -21,3 +21,4 @@ for line in lines:
         print(line[0]+">"+elements.text+"</string>")
         with open("patient_translater.txt", "a",encoding="utf-8") as fp:
             fp.writelines((line[0]+">"+elements.text+"</string>\n"))
+            # fp.writelines((line[1]+","+elements.text+"\n"))
