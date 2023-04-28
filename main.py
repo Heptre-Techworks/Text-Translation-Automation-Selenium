@@ -13,7 +13,7 @@ for line in lines:
     line=line.strip()
     line=line.replace("</string>","")
     line= line.split(">")
-    # print(line[0],line[1])
+    print(line[0],line[1])
 
     driver.get(search_url.format(q=line[1]))
     time.sleep(2)
